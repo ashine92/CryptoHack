@@ -38,7 +38,7 @@ Extract the modulus *`n`* as a decimal integer from Bruce's SSH public key.
 - [bruce_rsa.pub](https://cryptohack.org/static/challenges/bruce_rsa_6e7ecd53b443a97013397b1a1ea30e14.pub)
 
 ---
-
+# Solution
 ```python
 >>> from Crypto.PublicKey import RSA
 >>> f = open("bruce_rsa_6e7ecd53b443a97013397b1a1ea30e14.pub", "r")
