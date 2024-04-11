@@ -12,7 +12,7 @@ $ gmic flag.png lemur.png -blend xor -o result.png
 
 Mở file result.png:
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/85258bfe-e770-46e2-b776-c6ac8484abe5/17d33b9d-3339-4f8a-a10e-27b933b7e70e/Untitled.png)
+![image](https://github.com/ashine92/CryptoHack/assets/62413378/77061918-5373-4794-a9d4-30949d2e9296)
 
 # Another Solution
 
