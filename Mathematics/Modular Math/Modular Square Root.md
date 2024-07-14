@@ -115,4 +115,4 @@ print(tonelli_shanks(a, p))
 
 # Cách 2: Dùng sage
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/c1fe9261-615b-48b6-adad-128fd9c25a2e)
