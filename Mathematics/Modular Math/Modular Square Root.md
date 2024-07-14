@@ -1,3 +1,4 @@
+# Modular Square Root
 In Legendre Symbol we introduced a fast way to determine whether a number is a square root modulo a prime. We can go further: there are algorithms for efficiently calculating such roots. The best one in practice is called Tonelli-Shanks, which gets its funny name from the fact that it was first described by an Italian in the 19th century and rediscovered independently by Daniel Shanks in the 1970s.
 
 All primes that aren't 2 are of the form `p ≡ 1 mod 4` or `p ≡ 3 mod 4`, since all odd numbers obey these congruences. As the previous challenge hinted, in the `p ≡ 3 mod 4` case, a really simple formula for computing square roots can be [derived](https://crypto.stackexchange.com/a/20994)
