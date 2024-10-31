@@ -29,8 +29,18 @@ If $`a^2$ = x`  then $(-a)^2$= x. So if `x`  is a quadratic residue in some fin
 ints = [14, 6, 11]
 
 ```
+# Theory
+Quaratic residues là các số nguyên có thể được biểu diễn dưới dạng bình phương của một số nguyên khác, modulo một số nguyên n. Cụ thể, một số `a` được gọi là quadratic residue modulo n nếu tồn tại số nguyên x sao cho:
 
----
+`x^2 ≡ a (mod n)`
+
+Nếu không tồn tại 𝑥 thỏa mãn phương trình này, thì 𝑎 được gọi là quadratic non-residue modulo 𝑛.
+
+Ví dụ: với `n = 7`:
+
+Các quaratic residues là 0, 1, 2, và 4 vì có các số x sao cho x^2 đồng dư với những số này theo modulo 7.
+
+
 # Solution
 ```python
 >>> for i in range(29):
