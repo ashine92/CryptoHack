@@ -33,6 +33,34 @@ Ta sẽ tìm x, y sao cho: 26513x + 32321y = 1
 - Euclid mở rộng: ghi nhớ quá trình tìm gcd để truy ngược ra hệ số x, y
 
 ### 2. Cách thực hiện
+Giả sử bạn thực hiện phép chia Euclid: 
+`a = bq + r => r = a - bq`
+
+### Ví dụ: Tìm x, y sao cho 99x + 78y = gcd(99, 78)
+Bước 1: Thực hiện phép chia Euclid
+```
+99 = 1*78 + 21
+78 = 3*21 + 15
+21 = 1*15 + 6
+15 = 2*6 + 3
+6 = 2*3 + 0
+=> gcd = 3
+```
+Bước 2: Truy ngược
+Từ:
+```
+- 3 = 15 - 2 x 6 
+- 6 = 21 - 1 x 15
+-> 3 = 15 - 2 x (21 - 1 x 15) = 15 - 2 x 21 + 2 x 15 = 3 x 15 - 2 x 21
+- 15 = 78 - 3 x 21
+-> 3 = 3 x (78 - 3 x 21) - 2 x 21 = 3 x 78 - 9 x 21 - 2 x 21 = 3 x 78 - 11 x 21
+- 21 = 99 - 1 x 78
+-> 3 = 3 x 78 - 11 x (99 - 1 x 78) = 3 x 78 - 11 x 99 + 11 x 78 = 14 x 78 - 11 x 99
+```
+Thay ngược dần, bạn sẽ tìm được:
+3 = (-11) x 99 + 14 x 78
+
+Vậy x = -11, y = 14 
 
 ```python
 def gcdExtended(a, b):
