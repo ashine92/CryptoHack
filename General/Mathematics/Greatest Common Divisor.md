@@ -22,7 +22,33 @@ Hãy thử lập trình thuật toán đó — chỉ cần vài dòng mã. Dùng
 Bây giờ, hãy tính GCD(a, b) với a = 66528, b = 52920 và nhập kết quả bên dưới.
 
 # Solution
+Phép chia Euclid (hay còn gọi là thuật toán Euclid thường) là một cách tính ước số chung lớn nhất (GCD) của hai số nguyên dương bằng cách lặp lại phép chia lấy dư.
 
+Với 2 số nguyên dương a và b, giả sử a > b, thì phép chia Euclid thực hiện:
+` a = b . q + r `
+Trong đó:
+- q: thương
+- r: số dư, với 0 <= r < b
+Sau đó, ta thay a <- b, b <- r và lặp lại quá trình này cho đến khi r = 0. Khi đó GCD chính là số chia cuối cùng khác 0.
+
+**Ví dụ: Tính GCD(99, 78)**
+1. 99 = 1 . 78 + 21
+2. 78 = 3 . 21 + 15
+3. 21 = 1 . 15 + 6
+4. 15 = 2 . 6 + 3
+5. 6 = 2 . 3 + 0
+
+-> Dừng lại tại bước số dư = 0
+
+Vậy gcd(99, 78) = 3
+
+**✅ Ứng dụng**
+- Tính nhanh GCD mà không cần liệt kê tất cả ước số.
+
+- Cơ sở cho thuật toán Euclid mở rộng (tìm nghịch đảo modulo).
+
+- Dùng trong giải phương trình Diophantine và RSA.
+  
 ```python
 >>> import math
 >>> print(math.gcd(66528, 52920))
