@@ -1,24 +1,38 @@
 # Extended GCD
 
-Let `a` and `b` be positive integers.
+Giả sử a và b là các số nguyên dương.
 
-The extended Euclidean algorithm is an efficient way to find integers `u,v` such that
+Thuật toán euclid mở rộng là một cách hiệu quả để tìm các số nguyên u, v sao cho:
 
-`a * u + b * v = gcd(a,b)`
+**a × u + b × v = gcd(a, b)**
 
-Later, when we learn to decrypt RSA, we will need this algorithm to calculate the modular inverse of the public exponent.
+Về sau, khi bạn học cách giải mã văn bản rsa, bạn sẽ cần thuật toán này để tính nghịch đảo modulo của số mũ công khai.
 
-Using the two primes `p = 26513, q = 32321`, find the integers `u,v` such that
+Với hai số nguyên:
 
-`p * u + q * v = gcd(p,q)`
+**p = 26513**
+**q = 32321**
 
-Enter whichever of `u` and `v` is the lower number as the flag.
+Hãy tìm các số nguyên u, v sao cho:
 
-Knowing that `p,q` are prime, what would you expect `gcd(p,q)` to be? For more details on the extended Euclidean algorithm, check out [this page](https://web.archive.org/web/20230511143526/http://www-math.ucdenver.edu/~wcherowi/courses/m5410/exeucalg.html).
+**p × u + q × v = gcd(p, q)**
+
+Hãy nhập số nhỏ hơn trong hai số u và v làm "flag".
 
 # Solution
 
-Tham khảo: https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/
+## Giải thích chi tiết về thuật toán Euclid mở rộng
+### 1. Mục tiêu của thuật toán
+Thuật toán Euclid mở rộng giúp tìm các số nguyên x và y sao cho:
+a.x + b.y = gcd(a,b)
+Đây là đồng nhất thức Bézout.
+VD: a = 26513, b = 32321
+Ta sẽ tìm x, y sao cho: 26513x + 32321y = 1
+
+- Euclid thường: chỉ tìm gcd(a, b)
+- Euclid mở rộng: ghi nhớ quá trình tìm gcd để truy ngược ra hệ số x, y
+
+### 2. Cách thực hiện
 
 ```python
 def gcdExtended(a, b):
