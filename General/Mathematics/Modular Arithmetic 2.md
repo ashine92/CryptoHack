@@ -1,27 +1,39 @@
 # Modular Arithmetic 2
 
-We'll pick up from the last challenge and imagine we've picked a modulus p, and we will restrict ourselves to the case when p is prime.
+Chúng ta sẽ tiếp tục từ thử thách trước và tưởng tượng rằng ta đã chọn một modulo p, và p là một số nguyên tố.
 
-The integers modulo p define a field, denoted Fp.
+Tập các số nguyên theo modulo p tạo thành một trường (field), ký hiệu là Fp.
 
-`If the modulus is not prime, the set of integers modulo n define a ring.`
+Nếu modulo không phải là số nguyên tố, thì tập các số nguyên theo modulo n chỉ tạo thành một vành (ring)
 
+----
+## Trường hữu hạn Fp:
+Một trưởng hữu hạn Fp là tập hợp các số nguyên từ 0, 1, ..., p - 1, và với cả phép cộng và phép nhân, mọi phần tử a trong tập đều có nghịch đảo:
 
-A finite field Fp is the set of integers {0,1,...,p-1}, and under both addition and multiplication there is an inverse element b for every element a in the set, such that a + b = 0 and a * b = 1.
+- Nghịch đảo cộng (b+): sao cho `a + b+ = 0`
+- Nghịch đảo nhân (bx): sao cho `a x bx = 1`
 
-` Note that the identity element for addition and multiplication is different! This is because the identity when acted with the operator should do nothing: a + 0 = a and a * 1 = a.`
+Lưu ý: phần tử đơn vị (identity) trong phép cộng và phép nhân là khác nhau:
 
+- Với cộng: `a + 0 = a`
+- Với nhân: `a x 1 = a`
 
-Lets say we pick p = 17. Calculate 317 mod 17. Now do the same but with 517 mod 17.
+----
+## Ví dụ với p = 17:
+- Tính 3^17 mod 17
+- Tính 5^17 mod 17
 
-What would you expect to get for 716 mod 17? Try calculating that.
+Tiếp theo:
+- Dự đoán và tính 7^16 mod 17
+----
+Điều thú vị này được gọi là **Định lý nhỏ của Fermat (Fermat's Little Theorem).** Chúng ta sẽ cần nó (và các tổng quát của nó) khi học về mật mã RSA.
 
-This interesting fact is known as Fermat's little theorem. We'll be needing this (and its generalisations) when we look at RSA cryptography.
-
-Now take the prime `p = 65537`. Calculate `27324678765465536 mod 65537`.
-
-Did you need a calculator?
-
+----
+Giờ hãy lấy số nguyên tố lớn hơn:
+- p = 65537
+- Tính 27324678765^65536 mod 65537
+----
+Bạn có cần máy tính không? :D
 # Solution
 ```python
 >>> pow(273246787654, 65536) % 65537
