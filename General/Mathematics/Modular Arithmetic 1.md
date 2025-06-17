@@ -1,28 +1,26 @@
 # Modular Arithmetic 1
 
-Imagine you lean over and look at a cryptographer's notebook. You see some notes in the margin:
+Hãy tưởng tượng bạn nghiêng người nhìn vào cuốn sổ tay của một nhà mật mã học. Bạn thấy vài ghi chú bên lề:
 
-4 + 9 = 1
+```
+4 + 9 = 1  
+5 - 7 = 10  
+2 + 3 = 5  
+```
+Lúc đầu, bạn có thể nghĩ rằng họ bị điên. Bạn sẽ nghĩ, “Chắc đây là lý do tại sao ngày nay có quá nhiều vụ rò rỉ dữ liệu”, nhưng thực ra đây chỉ là số học modulo 12 (dù cách viết hơi cẩu thả một chút)
 
-5 - 7 = 10
+Có thể bạn chưa từng gọi nó là "số học đồng dư", nhưng bạn đã thực hiện các phép tính như vậy từ khi học cách xem giờ (hãy nhìn lại các phương trình đó và tưởng tượng đang cộng giờ đồng hồ).
 
-2 + 3 = 5
+Một cách chính xác, “tính giờ” được mô tả bằng lý thuyết đồng dư (congruences). Ta nói rằng hai số nguyên a và b là đồng dư theo modulo m nếu:
+`a≡b (mod m)`
 
-At first you might think they've gone mad. Maybe this is why there are so many data leaks nowadays you'd think, but this is nothing more than modular arithmetic modulo 12 (albeit with some sloppy notation).
+Nói cách khác, khi chia a cho m, phần dư là b. Điều này cũng có nghĩa là nếu m chia hết a (ký hiệu: m | a ) thì: `a≡0(mod m)`
 
-You may not have been calling it modular arithmetic, but you've been doing these kinds of calculations since you learnt to tell the time (look again at those equations and think about adding hours).
+**Yêu cầu: Hãy tính các đồng dư sau:**
+1. `11 ≡ x mod 6`
+2. `8146798528947 ≡ y mod 17`
 
-Formally, "calculating time" is described by the theory of congruences. We say that two integers are congruent modulo m if`a ≡ b mod m`.
-
-Another way of saying this, is that when we divide the integer `a` by `m`, the remainder is `b`. This tells you that if m divides a (this can be written as `m | a`) then `a ≡ 0 mod m`.
-
-Calculate the following integers:
-
-11 ≡ x mod 6
-
-8146798528947 ≡ y mod 17
-
-The solution is the smaller of the two integers.
+Sau đó, lấy số nhỏ hơn trong hai kết quả x và y làm đáp án cuối cùng.
 
 # Solution
 
